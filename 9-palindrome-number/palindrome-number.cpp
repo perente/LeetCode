@@ -19,9 +19,6 @@ public:
             x /= 10; 
         }
 
-        if(r_l == l_r)
-        return true;
-        else 
-        return false;
+        return r_l == l_r;
     }
 };
