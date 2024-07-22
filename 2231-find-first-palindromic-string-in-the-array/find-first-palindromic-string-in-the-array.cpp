@@ -5,11 +5,7 @@ public:
         for(size_t i = 0; i < words.size(); i++)
         {
             string normal = words[i];
-            string reversed;
-
-            for (size_t j = 0; j < normal.size(); j++) {
-                reversed.insert(reversed.begin(), normal[j]);
-            }
+            string reversed = reverse(normal);
 
             if(normal == reversed)
             {
@@ -17,5 +13,15 @@ public:
             }
         }
         return "";  
+    }
+
+    string reverse(string& word)
+    {
+        string reversed;
+        for(int i = word.size() - 1; i >= 0; i--)
+        {
+            reversed += word[i];
+        }
+        return reversed;
     }
 };
