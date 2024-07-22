@@ -7,19 +7,13 @@ public:
         {
             int middle = left + (right - left)/2;
             
-            if (middle % 2 == 0)
-            {
-                if(nums[middle] == nums[middle + 1])
-                left = middle + 2;
-                else
-                right = middle;
-            } else
-            {
-                if(nums[middle] == nums[middle - 1])
-                left = middle + 1;
-                else
-                right = middle - 1;
-            } 
+            if (middle % 2 == 1) 
+            middle--;
+
+            if(nums[middle] == nums[middle + 1])
+            left = middle + 2;
+            else
+            right = middle;
         }
         return nums[left];
     }
