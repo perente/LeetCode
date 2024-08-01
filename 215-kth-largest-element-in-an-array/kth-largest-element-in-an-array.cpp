@@ -21,14 +21,14 @@ public:
         if(left == right) 
         return nums[left];
 
-        int pivot_index = partition(nums, left, right);
+        int pivot = partition(nums, left, right);
 
-        if(pivot_index == k) 
-        return nums[pivot_index];
-        else if (pivot_index < k) 
-        return quickSelect(nums, pivot_index + 1, right, k);
+        if(pivot == k) 
+        return nums[pivot];
+        else if (pivot < k) 
+        return quickSelect(nums, pivot + 1, right, k);
         else 
-        return quickSelect(nums, left, pivot_index - 1, k);
+        return quickSelect(nums, left, pivot - 1, k);
     }
 
     int findKthLargest(vector<int>& nums, int k) {
