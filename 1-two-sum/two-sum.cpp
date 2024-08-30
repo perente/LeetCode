@@ -8,7 +8,7 @@ public:
             int remain = target - nums[i];
 
             if(value_index.find(remain) != value_index.end())
-            return {value_index[remain], i};
+            return {i, value_index[remain]};
 
             value_index[nums[i]] = i;
         }
