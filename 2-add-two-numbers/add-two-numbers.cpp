@@ -74,4 +74,4 @@ public:
 };
 
 //check sizes of lists, if not equal add zeros in reverse order(next)
-//basic sum, carry focus
+//basic sum, focus on carry
